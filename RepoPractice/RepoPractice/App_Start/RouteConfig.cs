@@ -16,7 +16,26 @@ namespace RepoPractice
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Product", action = "DisplayAllProducts", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Delete",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Product", action = "DeleteProduct", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Add",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Product", action = "AddProduct", id = UrlParameter.Optional }
+            );
+
+
+            routes.MapRoute(
+                name: "Update",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Product", action = "UpdateProducts", id = UrlParameter.Optional }
             );
         }
     }
