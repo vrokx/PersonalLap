@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Web;
 using RepoPractice.Models;
+using System.Web.Mvc;
 
 namespace RepoPractice.Models.DAL.Product
 {
@@ -49,5 +50,6 @@ namespace RepoPractice.Models.DAL.Product
         {
             _context.Entry(model).State= EntityState.Modified;
         }
+
     }
 }

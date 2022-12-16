@@ -10,7 +10,12 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        
+        @if (User.Identity.IsAuthenticated)
+            {<ul>
+                <li>Dear - @User.Identity.Name</li>
+                <li>@Html.ActionLink("Logout" , "Logout" , "Login")</li>
+                </ul>
+            }
     </div>
 
     <div class="container body-content">

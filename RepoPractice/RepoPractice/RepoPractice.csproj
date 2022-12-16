@@ -135,9 +135,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\BuyerController.cs" />
+    <Compile Include="Controllers\SellerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,10 +189,15 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Views\Product\UpdateProducts.cshtml" />
-    <Content Include="Views\Product\DeleteProduct.cshtml" />
-    <Content Include="Views\Product\DisplayAllProducts.cshtml" />
-    <Content Include="Views\Product\AddProduct.cshtml" />
+    <Content Include="Views\Seller\UpdateProducts.cshtml" />
+    <Content Include="Views\Seller\DeleteProduct.cshtml" />
+    <Content Include="Views\Seller\DisplayAllProducts.cshtml" />
+    <Content Include="Views\Seller\AddProduct.cshtml" />
+    <Content Include="Views\Seller\SendMail.cshtml" />
+    <Content Include="Views\Buyer\BuyerDisplayAllProduct.cshtml" />
+    <Content Include="Views\Buyer\ViewCart.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -200,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Authorization\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212121755072_ShoppingCartDB.resx">
