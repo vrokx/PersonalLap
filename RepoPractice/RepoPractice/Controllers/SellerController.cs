@@ -84,31 +84,7 @@ namespace RepoPractice.Controllers
             return RedirectToAction("DisplayAllProducts");
         }
 
-        //public ActionResult SendMail(int id)
-        //{
-        //    UserModel i = userObj.GetAllById(id);
-        //    return View(i);
-        //}
 
-        //[HttpPost]
-        //public ActionResult SendMail(UserModel user , OrderModel order)
-        //{
-        //    MailMessage mm = new MailMessage("radhakrishna36495@gmail.com", "ravalvp007@gmail.com");
-        //    mm.Subject = "Order Confirmed";
-        //    mm.Body = order.OrderStatus;
-        //    mm.IsBodyHtml = false;
-        //    SmtpClient smtp = new SmtpClient();
-        //    smtp.Host = "smtp.gmail.com";
-        //    smtp.Port = 587;
-        //    smtp.EnableSsl = true;
-
-
-        //    NetworkCredential nc = new NetworkCredential("radhakrishna36495@gmail.com", "iufedzbfhqlpypdl");
-        //    smtp.UseDefaultCredentials = false;
-        //    smtp.Credentials = nc;
-        //    smtp.Send(mm);
-        //    return Content(user.Email);
-        //}
 
     }
 }

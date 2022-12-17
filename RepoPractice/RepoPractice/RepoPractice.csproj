@@ -198,6 +198,7 @@
     <Content Include="Views\Buyer\ViewCart.cshtml" />
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Buyer\AddToCart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -207,7 +208,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Authorization\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202212121755072_ShoppingCartDB.resx">

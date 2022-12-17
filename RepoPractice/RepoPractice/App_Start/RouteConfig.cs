@@ -74,6 +74,12 @@ namespace RepoPractice
                defaults: new { controller = "Login", action = "Logout", id = UrlParameter.Optional }
            );
 
+            routes.MapRoute(
+               name: "SendMail",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Buyer", action = "SendMail", id = UrlParameter.Optional }
+           );
+
         }
     }
 }

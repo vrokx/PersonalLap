@@ -1,16 +1,16 @@
 ﻿@model IEnumerable<RepoPractice.Models.ProductModel>
 
-<button class="btn btn-secondary">@Html.ActionLink("View Cart", "ViewCart", new { @style = "text-decoration : none;color : white" })</button>
+<button class="btn btn-outline-primary" style="text-decoration: none;">@Html.ActionLink("View Cart", "ViewCart", new { @style = "text-decoration : none;color : white" })</button>
 <div>
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="card shadow col-lg-3 m-4" style="width: 18rem;">
-                <img src="C:\Users\VaibhavVM\Pictures\Screenshots\Screenshot (8)" class="card-img-top" alt="...">
+                <img src="@Url.Content(item.Image)" class="card-img-top" alt="...">
                 <div class="card-body">
                     <lable>Product Name : </lable><h5 class="card-title">@Html.DisplayFor(modelItem => item.ProductName)</h5>
                     <lable>Price : </lable><p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
-                    <button class="btn btn-secondary">@Html.ActionLink("Add To Cart", "AddToCart", new { id = item.ProductId }, new { @style = "text-decoration : none;color : white" })</button>
+                    <button class="btn btn-primary">@Html.ActionLink("Add To Cart", "AddToCart", new { id = item.ProductId }, new { @style = "text-decoration : none;color : white" })</button>
                 </div>
             </div>
             <br />

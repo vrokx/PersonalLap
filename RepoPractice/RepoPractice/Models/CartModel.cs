@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -18,6 +19,9 @@ namespace RepoPractice.Models
         public float TotalAmount { get; set; }
 
         public UserModel UserModel { get; set; }
+
+        [ForeignKey("ProductModel")]
+        public int ProductModel_ProductId { get; set; }
 
         public ProductModel ProductModel { get; set; }
     }

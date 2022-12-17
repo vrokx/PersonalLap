@@ -36,17 +36,29 @@ namespace RepoPractice.App_Start
         }
 
         [HttpPost]
-        public ActionResult Login(string email, string password, UserModel user)
+        public ActionResult Login(string email, string password , UserModel user)
         {
-            if(email == user.Email && password == user.Password) 
+            //bool isValid = UserModel.Any(x => x.Email == email);
+
+            //var myList = (from i in userObj.GetAll() select i).ToList();
+            //var dbEmail = (from i in myList
+            //              select i.Email).ToString();
+            //var dbPassword = (from i in myList
+            //                 select i.Password).ToString();
+
+            if (email == user.Email && password == user.Password) 
             {
+
                 if (email == "admin@admin.com" && password == "admin@123")
                 {
                     FormsAuthentication.SetAuthCookie(email, false);
                     return RedirectToAction("DisplayAllProducts", "Seller");
                 }
-                FormsAuthentication.SetAuthCookie(email, false);
-                return RedirectToAction("BuyerDisplayAllProduct", "Buyer");
+                else
+                {
+                    FormsAuthentication.SetAuthCookie(email, false);
+                    return RedirectToAction("BuyerDisplayAllProduct", "Buyer");
+                }
             }
             return Content("Logged In !");
         }
